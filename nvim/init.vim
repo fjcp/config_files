@@ -59,29 +59,6 @@ let mapleader=" "
 tnoremap <Esc> <C-\><C-n>
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
-let g:rainbow_conf = {
-    \	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-    \	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-    \	'operators': '_,_',
-    \	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-    \	'separately': {
-    \		'*': {},
-    \		'tex': {
-    \			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-    \		},
-    \		'lisp': {
-    \			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-    \		},
-    \		'vim': {
-    \			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-    \		},
-    \		'html': {
-    \			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-    \		},
-    \		'css': 0,
-    \	}
-\}
-
 let g:edge_style = 'aura'
 let g:edge_enable_italic = 0
 let g:edge_disable_italic_comment = 0
@@ -104,7 +81,7 @@ set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 set expandtab
 set smartindent
-set tabstop=2 softtabstop=2
+set tabstop=2 softtabstop=2 shiftwidth=2
 set cmdheight=2
 set updatetime=50
 set signcolumn=yes
