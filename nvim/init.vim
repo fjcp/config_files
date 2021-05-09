@@ -20,7 +20,6 @@ Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'rhysd/vim-clang-format'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'majutsushi/tagbar'
-Plug 'vim-scripts/a.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
@@ -30,6 +29,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'f-person/git-blame.nvim'
 Plug 'luochen1990/rainbow'
 Plug 'psliwka/vim-smoothie'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -104,7 +104,7 @@ set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 set expandtab
 set smartindent
-set tabstop=4 softtabstop=4
+set tabstop=2 softtabstop=2
 set cmdheight=2
 set updatetime=50
 set signcolumn=yes
