@@ -16,7 +16,6 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'rhysd/vim-clang-format'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'majutsushi/tagbar'
@@ -30,7 +29,8 @@ Plug 'f-person/git-blame.nvim'
 Plug 'luochen1990/rainbow'
 Plug 'psliwka/vim-smoothie'
 Plug 'jiangmiao/auto-pairs'
-
+Plug 'ryanoasis/vim-devicons'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " Automatically install missing plugins on startup
@@ -53,6 +53,20 @@ if &list
     set listchars+=eol:¬
     set listchars+=trail:·
 endif
+
+" lightline config
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
 
 let mapleader=" "
 " To map <Esc> to exit terminal-mode:
