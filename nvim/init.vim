@@ -33,6 +33,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'steelsojka/completion-buffers'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'bagrat/vim-buffet'
 call plug#end()
 
 " Automatically install missing plugins on startup
@@ -41,6 +42,7 @@ autocmd VimEnter *
   \|   PlugInstall --sync | q
   \| endif
 
+let mapleader=" "
 " Apearence config
 
 if has('termguicolors')
@@ -55,7 +57,18 @@ if &list
     set listchars+=eol:¬
     set listchars+=trail:·
 endif
+" vim-buffet config
 
+nmap <leader>1 <Plug>BuffetSwitch(1)
+nmap <leader>2 <Plug>BuffetSwitch(2)
+nmap <leader>3 <Plug>BuffetSwitch(3)
+nmap <leader>4 <Plug>BuffetSwitch(4)
+nmap <leader>5 <Plug>BuffetSwitch(5)
+nmap <leader>6 <Plug>BuffetSwitch(6)
+nmap <leader>7 <Plug>BuffetSwitch(7)
+nmap <leader>8 <Plug>BuffetSwitch(8)
+nmap <leader>9 <Plug>BuffetSwitch(9)
+nmap <leader>0 <Plug>BuffetSwitch(10)
 " lightline config
 
 let g:lightline = {
@@ -68,9 +81,11 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
+let g:lightline = {
+			\ 'enable': { 'tabline': 0 },
+			\ }
 
 nnoremap <C-n> :NvimTreeToggle<CR>
-let mapleader=" "
 " To map <Esc> to exit terminal-mode:
 tnoremap <Esc> <C-\><C-n>
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
