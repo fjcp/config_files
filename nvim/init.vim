@@ -20,7 +20,6 @@ Plug 'rhysd/vim-clang-format'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'majutsushi/tagbar'
 Plug 'RRethy/vim-illuminate'
-Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
@@ -32,6 +31,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
 Plug 'steelsojka/completion-buffers'
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
 
 " Automatically install missing plugins on startup
@@ -61,14 +62,14 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
 
-
+nnoremap <C-n> :NvimTreeToggle<CR>
 let mapleader=" "
 " To map <Esc> to exit terminal-mode:
 tnoremap <Esc> <C-\><C-n>
