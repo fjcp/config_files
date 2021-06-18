@@ -116,6 +116,7 @@ set tabstop=2 softtabstop=2 shiftwidth=2
 set cmdheight=2
 set updatetime=50
 set signcolumn=yes
+set inccommand=nosplit
 
 augroup highlight_yank
   autocmd!
